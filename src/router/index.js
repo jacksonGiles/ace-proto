@@ -1,6 +1,12 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import UserView from "../views/UserView.vue";
+import ClientUserView from "../views/ClientUserView.vue";
+import SiteView from "../views/SiteView.vue";
+import PointView from "../views/PointView.vue";
+import GatewayView from "../views/GatewayView.vue";
+import DeviceView from "../views/DeviceView.vue";
 
 Vue.use(VueRouter);
 
@@ -11,13 +17,34 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    path: "/user",
+    name: "user",
+    component: UserView,
+  },
+  {
+    path: "/client-user",
+    name: "client user",
+    component: ClientUserView,
+  },
+  {
+    path: "/site",
+    name: "site",
+    component: SiteView,
+  },
+  {
+    path: "/point",
+    name: "point",
+    component: PointView,
+  },
+  {
+    path: "/gateway",
+    name: "gateway",
+    component: GatewayView,
+  },
+  {
+    path: "/device",
+    name: "device",
+    component: DeviceView,
   },
 ];
 
